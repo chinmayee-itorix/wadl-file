@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf-Remove-Proxy-Auth-Header">
+    <DisplayName>cf-Remove-Proxy-Auth-Header</DisplayName>
+    <Properties/>
+    <Remove>
+        <Headers>
+            <Header name="x-auth-key"/>
+        </Headers>
+    </Remove>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

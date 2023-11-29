@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="cf-Assign-Routing-Variables-getAllRepositories">
+    <!-- Target Service name -->
+    <AssignVariable>
+        <Name>target.route.service</Name>
+        <Value>fisheye</Value>
+    </AssignVariable>
+    <!-- Target Action name -->
+    <AssignVariable>
+        <Name>targetOperation</Name>
+        <Value>getAllRepositories</Value>
+    </AssignVariable>
+    <!-- Target Base Path -->
+    <AssignVariable>
+        <Name>targetBasePath</Name>
+        <Value></Value>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http"
+    type="request" />
+</AssignMessage>

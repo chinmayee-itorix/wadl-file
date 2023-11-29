@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="fisheye">
+    <Description>fisheye</Description>
+	<FaultRules/>
+	<DefaultFaultRule>
+        <AlwaysEnforce>true</AlwaysEnforce>
+        <Step>
+            <Name>SF-PostflowResponseTargetLogAggregator</Name>
+        </Step>
+    </DefaultFaultRule>
+	<PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>SF-PreflowRequestTargetLogAggregator</Name>
+            </Step>
+            <Step>
+                <Name>cf-Remove-Proxy-Auth-Header</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+	<Flows>
+        <Flow name="getChangesetsForText">
+        	<Condition>(targetOperation = &quot;getChangesetsForText&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getAllRepositories">
+        	<Condition>(targetOperation = &quot;getAllRepositories&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getRepositoryInfo">
+        	<Condition>(targetOperation = &quot;getRepositoryInfo&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="listPathHistory">
+        	<Condition>(targetOperation = &quot;listPathHistory&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="listTagsForRevision">
+        	<Condition>(targetOperation = &quot;listTagsForRevision&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getPathList">
+        	<Condition>(targetOperation = &quot;getPathList&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getRevisionInfo">
+        	<Condition>(targetOperation = &quot;getRevisionInfo&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="listChangesets">
+        	<Condition>(targetOperation = &quot;listChangesets&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getChangeset">
+        	<Condition>(targetOperation = &quot;getChangeset&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getCrossRepositoryQuery">
+        	<Condition>(targetOperation = &quot;getCrossRepositoryQuery&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getQueryAsRows">
+        	<Condition>(targetOperation = &quot;getQueryAsRows&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getReviewsForChangeset">
+        	<Condition>(targetOperation = &quot;getReviewsForChangeset&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getReviewsForChangesets">
+        	<Condition>(targetOperation = &quot;getReviewsForChangesets&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getQuery">
+        	<Condition>(targetOperation = &quot;getQuery&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="getChangesetDetails">
+        	<Condition>(targetOperation = &quot;getChangesetDetails&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+        <Flow name="findSliceData">
+        	<Condition>(targetOperation = &quot;findSliceData&quot;)</Condition>
+			<Request>
+			</Request>
+			<Response>
+            </Response>
+        </Flow>
+	</Flows>
+    <PostFlow name="PostFlow">
+        <Request>
+            <Step>
+                <Name>SF-PostflowRequestTargetLogAggregator</Name>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <Name>SF-PostflowResponseTargetLogAggregator</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <HTTPTargetConnection>
+    	<LoadBalancer>
+            <Server name="fisheye">
+                <IsEnabled>true</IsEnabled>
+            </Server>
+        </LoadBalancer>
+        <Path>http://host:port/context/</Path>
+    </HTTPTargetConnection>
+</TargetEndpoint>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="SF-JSONThreatValidation">
+    <DisplayName>SF-JSONThreatValidation</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>SF-JSON-Threat-Protection</SharedFlowBundle>
+</FlowCallout>

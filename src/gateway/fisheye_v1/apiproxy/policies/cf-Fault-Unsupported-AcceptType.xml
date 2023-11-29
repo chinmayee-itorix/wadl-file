@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="cf-Fault-Unsupported-AcceptType">
+    <FaultResponse>
+        <Set>
+            <StatusCode>406</StatusCode>
+            <ReasonPhrase>Not Acceptable</ReasonPhrase>
+            <Payload>{"errors":[{"code":"SECURITY-0018","userMessage":"Accept Type not supported","info":"The Accept type set in request header is not supported."}]}</Payload>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

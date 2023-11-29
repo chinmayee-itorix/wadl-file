@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="cf-Fault-Unsupported-ContentType">
+    <FaultResponse>
+        <Set>
+            <StatusCode>415</StatusCode>
+            <ReasonPhrase>Unsupported Media Type</ReasonPhrase>
+            <Payload>{"errors":[{"code":"SECURITY-0019","userMessage":"Content-Type not supported","info":"The Content type set in request header is not supported."}]}</Payload>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

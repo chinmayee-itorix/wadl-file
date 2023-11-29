@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<FlowCallout async="false" continueOnError="false" enabled="true" name="SF-Log-Collector">
+    <DisplayName>SF-Log-Collector</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <SharedFlowBundle>SF-LogCollector-v1</SharedFlowBundle>
+</FlowCallout>

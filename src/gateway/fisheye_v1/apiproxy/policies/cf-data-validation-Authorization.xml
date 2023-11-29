@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="cf-data-validation-Authorization">
+    <DisplayName>cf-data-validation-Authorization</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <StatusCode>400</StatusCode>
+            <ReasonPhrase>Bad Request</ReasonPhrase>
+            <Payload>
+                {
+  "errors": [
+    {
+      "code": "Data-Validation-1003",
+      "userMessage": "Mandatory authorization header parameters are missing as per contract",
+      "info": "https://developers.myapi.com/#Data-Validation-1003"
+    }
+  ]
+}
+            </Payload>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<APIProxy revision="1" name="fisheye">
+    <ConfigurationVersion majorVersion="4" minorVersion="0" />
+    <Description>fisheye</Description>
+    <Policies>
+        <!-- Values will be populated by deployment script -->
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>fisheye</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <!-- Values will be populated by deployment script -->
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <!-- Values will be populated by deployment script -->
+            <TargetEndpoint>fisheye</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>
